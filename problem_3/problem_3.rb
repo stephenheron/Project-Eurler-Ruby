@@ -17,5 +17,12 @@ def sieve(max)
   return primes
 end
 
-puts sieve(30)
-
+time do 
+  input = 600851475143
+  primes = sieve(10000)
+  largest = 0
+  primes.each do |p|
+    largest = p if input % p == 0
+  end
+  puts "The largest prime factor of #{input} is #{largest}"
+end
