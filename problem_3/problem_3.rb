@@ -1,8 +1,4 @@
-def time
-  start = Time.now
-  yield
-  puts "This code took #{Time.now - start} seconds to run"
-end
+require("../timer/timer.rb")
 
 def sieve(max)  
   primes = (2..max).to_a

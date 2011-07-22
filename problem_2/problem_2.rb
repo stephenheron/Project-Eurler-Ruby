@@ -1,8 +1,4 @@
-def time
-  start = Time.now
-  yield
-  puts "This code took #{Time.now - start} seconds to run"
-end
+require("../timer/timer.rb")
 
 time do
   second_last = 0
