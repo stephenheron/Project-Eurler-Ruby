@@ -8,7 +8,7 @@ def sieve(max)
   primes = (2..max).to_a
   count = 0
 
-  while count <= max do
+  while count**2 <= max do
     prime = primes[count]
     primes.each do |n|
       unless prime.nil?
@@ -23,5 +23,5 @@ def sieve(max)
   return primes
 end
 
-puts sieve(1000)
+puts sieve(30)
 
