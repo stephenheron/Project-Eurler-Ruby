@@ -10,14 +10,8 @@ def sieve(max)
 
   while count**2 <= max do
     prime = primes[count]
-    primes.each do |n|
-      unless prime.nil?
-        if n % prime == 0 and n != prime 
-          primes.delete(n) 
-        end
-      end
-    end
-    count = count + 1
+    primes.delete_if {|n| n % prime == 0 and n != prime}
+    count += 1
   end
 
   return primes
