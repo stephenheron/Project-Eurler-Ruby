@@ -16,7 +16,7 @@ time do
     last = tmp_last
 
     if last % 2 == 0
-      sum = sum + last
+      sum += last
     end
   end
 
