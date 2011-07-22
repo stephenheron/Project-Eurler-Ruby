@@ -4,13 +4,24 @@ def time
   puts "This code took #{Time.now - start} seconds to run"
 end
 
-time do
-  input = 600851475143
-  largest = 0
+def sieve(max)  
+  primes = (2..max).to_a
+  count = 0
 
-  (1..input/2).each do |n|
-    largest = n if largest % n == 0
+  while count <= max do
+    prime = primes[count]
+    primes.each do |n|
+      unless prime.nil?
+        if n % prime == 0 and n != prime 
+          primes.delete(n) 
+        end
+      end
+    end
+    count = count + 1
   end
 
-  puts largest
+  return primes
 end
+
+puts sieve(1000)
+
