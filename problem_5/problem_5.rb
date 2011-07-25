@@ -8,7 +8,7 @@ time do
     (11..max).each do |n|
       found = false if count % n != 0 
     end
-  break if found == true
+    break if found == true
     count += 1 
   end
 
